@@ -13,3 +13,8 @@ git push -u origin main
 git remote add origin https://github.com/suttisakfull/Arduino_Lab.git
 git branch -M main
 git push -u origin main
+
+git status
+git add .
+git commit -m "demo_02.cpp"
+git push
