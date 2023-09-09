@@ -3,7 +3,7 @@ int count  = 0;
 void setup() 
 {
    Serial.begin(9600);
-   Serial.println("========  TEST SERIAL ========");
+   Serial.println("========  TEST SERIAL:: ========");
 }
 void loop() 
 {
