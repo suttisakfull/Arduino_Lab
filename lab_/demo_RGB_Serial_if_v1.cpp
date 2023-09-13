@@ -12,7 +12,6 @@ void setup()
   digitalWrite(5,HIGH);  //LED --- OFF ---
   digitalWrite(6,HIGH);  //LED --- OFF ---
   digitalWrite(7,HIGH);  //LED --- OFF ---
-  Serial.print("Please key Color: red , green ,blue ");
 }
 
 void loop() 
@@ -21,9 +20,7 @@ void loop()
   {
     String val = Serial.readString();
     val.trim();
-    Serial.println(val);
-    if((val =="red")||(val =="green")||(val =="blue"))
-    {
+    
         if(val=="red")
           {
           Serial.println("LED_red: ON");
@@ -44,16 +41,6 @@ void loop()
           digitalWrite(5,HIGH);
           digitalWrite(6,HIGH);
           digitalWrite(7,LOW);
-        }
-    }
-    else
-    {
-         digitalWrite(5,HIGH);
-         digitalWrite(6,HIGH);
-         digitalWrite(7,HIGH);
-         Serial.println("========= don't key =======");
-    }
-   
-    
+        }  
   }
 }
