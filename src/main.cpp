@@ -14,25 +14,45 @@ void setup()
   Serial.print("B=");
   Serial.println(B);
 
-  Serial.print("A = B : => " ); 
-  Serial.println(A = B); 
-  A = 20;
-  B = 10;
-  Serial.print("A + B : => " ); 
-  Serial.println(A + B);
-  A = 20;
-  B = 10;
-  Serial.print("A -  B : => " ); 
-  Serial.println(A - B);
-  A = 20;
-  B = 10;
-  Serial.print("A *  B : => " ); 
-  Serial.println(A * B);
-  A = 20;
-  B = 10;
-  Serial.print("A / B : => " ); 
-  Serial.println(A / B);
+  Serial.print("A += B : => " ); 
+  Serial.println(A += B); 
 
+  A = 20;
+  B = 10;
+  Serial.print("A -= B : => " ); 
+  Serial.println(A -= B); 
+
+  A = 20;
+  B = 10;
+  Serial.print("A *= B : => " ); 
+  Serial.println(A *= B); 
+
+  A = 20;
+  B = 10;
+  Serial.print("A /= B : => " ); 
+  Serial.println(A /= B); 
+
+  A = 20;
+  Serial.print("++A : => ");
+  Serial.println(++A);
+
+  A = 20; 
+  Serial.print("A++ : => ");
+  Serial.print(A++);
+  Serial.print(" Afer: ");
+  Serial.println(A);
+
+  A = 20;
+  Serial.print("--A : => ");
+  Serial.println(--A);
+
+  A = 20; 
+  Serial.print("A-- : => ");
+  Serial.print(A--);
+  Serial.print(" Afer: ");
+  Serial.println(A);
+ 
+  
   Serial.println("============== End Program: ============");
 }
 void loop() 

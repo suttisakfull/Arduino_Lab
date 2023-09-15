@@ -29,14 +29,14 @@ void loop()
           digitalWrite(6,HIGH);
           digitalWrite(7,HIGH);
           }  
-       if(val == "green")
+        if(val == "green")
          {
           Serial.println("LED_green: ON");  
           digitalWrite(5,HIGH);
           digitalWrite(6,LOW);
           digitalWrite(7,HIGH);   
          }
-       if(val == "blue")
+        if(val == "blue")
         {
           Serial.println("LED_blue: ON"); 
           digitalWrite(5,HIGH);
