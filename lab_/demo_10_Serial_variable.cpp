@@ -8,6 +8,14 @@ void setup()
   String str = "Hello Arduino:";
   bool state = true;
 
+   String name = "jonh";
+   String lname = "Wick";
+   int old = 38;
+   float wight = 70.2;
+   float hight = 174.5;
+   bool boy = true;
+
+
   Serial.begin(9600);  //19200,38400,57600,115200, 
   Serial.println("======== Start Program: =======");
   Serial.println(num);
