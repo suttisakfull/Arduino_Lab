@@ -1,9 +1,12 @@
 #include <Arduino.h>
 int val = 0;
 int dl = 0;
+
+int led1 = 4;
+int led2 = 5;
 void setup() 
 {
-   pinMode(4,OUTPUT);
+   pinMode(led1,OUTPUT);
    pinMode(5,OUTPUT);
    pinMode(A0,INPUT);
 }
@@ -11,12 +14,12 @@ void loop()
 {
    val = analogRead(A0);
    dl = map(val, 0, 1023, 20, 1023);
-   digitalWrite(4 ,LOW);
+   digitalWrite(led1 ,LOW);
    delay(dl);
-   digitalWrite(4 ,HIGH);
+   digitalWrite(led1 ,HIGH);
    delay(dl);
-   digitalWrite(5 ,LOW);
+   digitalWrite(led2 ,LOW);
    delay(dl);
-   digitalWrite(5 ,HIGH);
+   digitalWrite(led2 ,HIGH);
    delay(dl);
 }
