@@ -6,8 +6,6 @@
 //============== Pin ===============
 #define pinCLK 2 // DT1
 #define pinDT 3  // CLK1
-#define pinPush 4 // PushButton
-#define LED_1 5 // LED
 //============== object =============
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 //============== gobal ==============
@@ -21,8 +19,6 @@ int Min_Counter = 1;
 int Meun_Select = 1; // tellermenu
 String Menu_List[] = {"A:", "B:"};
 bool Update_Node = true;
-bool LED_loop = false;
-int  LED_Delay = 100;
 
 //============== Functions ============
 void EncoderMenu();
@@ -35,8 +31,6 @@ void setup()
 
   pinMode(pinCLK, INPUT);
   pinMode(pinDT, INPUT);
-  pinMode(pinPush, INPUT);
-  pinMode(LED_1,OUTPUT);
 
   LastState = digitalRead(pinCLK);
 
@@ -50,19 +44,6 @@ void loop()
 {
   EncoderMenu();
   PrintCounter();
-  push_Select();
-}
-void push_Select()
-{
-   if(digitalRead(pinPush == 0))
-   {
-    if(Meun_Select == 1)
-    {
-      LED_loop =! LED_loop;
-      Update_Node == true;
-      delay(200);
-    }
-   }
 }
 void PrintCounter()
 {
@@ -80,16 +61,6 @@ void PrintCounter()
 
     lcd.setCursor(0,Meun_Select - 1);
     lcd.print(">");
-
-    lcd.setCursor(14,0)
-    if(LED_loop == true)
-    {
-          lcd.print("ON ");
-    }
-    else
-    {
-          lcd.print("OFF");
-    }
     Update_Node = false;
   }
 }

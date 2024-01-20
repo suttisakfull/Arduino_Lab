@@ -46,7 +46,10 @@ void loop()
    if((PinA_Last1 == LOW) && (Encoder_1 == HIGH))
    {
       if(digitalRead(CLK1_PinA) == LOW){
-        DT1_Pos--;
+         if(DT1_Pos >= 1)
+           {
+               DT1_Pos--;
+           }
       }
       else
       {
