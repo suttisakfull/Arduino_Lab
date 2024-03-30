@@ -69,7 +69,7 @@ void EncoderMenu()
     else
     {
       counter--;
-      if (counter > Min_Counter * 2)
+      if (counter < Min_Counter * 2)
       {
         counter = Min_Counter * 2;
       }
